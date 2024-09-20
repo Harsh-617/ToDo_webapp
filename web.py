@@ -8,6 +8,7 @@ def add_todo():
     todo = st.session_state["new_todo"] + "\n"
     todos.append(todo)
     TODO_functions.write_todos(todos)
+    st.session_state["new_todo"] = ""  #clears the input box
 
 st.title("My ToDo App")
 st.subheader("This is my daily to-do app")
